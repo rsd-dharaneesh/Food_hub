@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #F8F8F8;
+    color: #1C1C1C;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 36px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+    border: 1px solid #F0F0F0;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1C1C1C;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.order-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    background: #FAFAFA;
+    border: 1.5px solid #E8E8E8;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 28px;
+}
+
+.info-item label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #707070;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.info-item span {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1C1C1C;
+}
+
+.table-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #1C1C1C;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th {
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #707070;
+    text-transform: uppercase;
+    border-bottom: 1.5px solid #F0F0F0;
+}
+
+td {
+    padding: 16px 14px;
+    border-bottom: 1px solid #F6F6F6;
+    font-size: 14.5px;
+    color: #1C1C1C;
+}
+
+.food-cell {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.food-image {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.btn-back {
+    display: inline-block;
+    background: #E23744;
+    color: white;
+    padding: 13px 26px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14.5px;
+    box-shadow: 0 4px 14px rgba(226, 55, 68, 0.3);
+    transition: all 0.25s ease;
+}
+
+.btn-back:hover {
+    background: #d32f2f;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,32 @@
+# Eclipse
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+.settings/
+.classpath
+.project
+
+# Java
+*.class
+
+# Tomcat
+work/
+temp/
+logs/
+
+# Build output
+target/
+
+# Local configuration
+.env
+
+# Database / secrets
+*.sql
+application-local.properties
+
+# OS files
+.DS_Store
+Thumbs.db

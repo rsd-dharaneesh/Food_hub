@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodHub - Order Food Online</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background: #f8f8f8; color: #1c1c1c; }
+.navbar { background: #ffffff; height: 72px; display: flex; justify-content: space-between; align-items: center; padding: 0 8%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.logo { font-size: 32px; font-weight: 800; color: #E23744; text-decoration: none; display: flex; align-items: center; gap: 6px; }
+.logo span { color: #1c1c1c; }
+.nav-links a { color: #363636; text-decoration: none; font-size: 15px; font-weight: 600; padding: 8px 16px; border-radius: 10px; transition: 0.25s ease; }
+.nav-links a:hover, .active { color: #E23744; background: rgba(226, 55, 68, 0.06); }
+.hero { background: linear-gradient(135deg, rgba(28,28,28,0.88), rgba(226,55,68,0.82)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600') center/cover no-repeat; color: white; text-align: center; padding: 70px 20px; }
+.hero h1 { font-size: 46px; font-weight: 800; margin-bottom: 12px; }
+.hero p { font-size: 18px; color: #f0f0f0; }
+.container { max-width: 1300px; margin: 40px auto; padding: 0 25px; display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 32px; }
+.card { background: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.05); transition: 0.35s ease; border: 1px solid #f0f0f0; }
+.card:hover { transform: translateY(-8px); box-shadow: 0 16px 36px rgba(0,0,0,0.12); }
+.card img { width: 100%; height: 220px; object-fit: cover; }
+.content { padding: 22px; }
+.top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.top h2 { font-size: 20px; font-weight: 700; color: #1c1c1c; }
+.rating { background: #24963F; color: white; padding: 4px 10px; border-radius: 8px; font-weight: 700; font-size: 13px; }
+.time { background: #FFF0F1; color: #E23744; padding: 4px 12px; border-radius: 20px; font-weight: 600; font-size: 12.5px; display: inline-block; margin: 8px 0; }
+.cuisine { color: #E23744; font-weight: 600; font-size: 14px; }
+.addr { color: #707070; font-size: 13.5px; margin-bottom: 14px; }
+.desc { color: #555555; font-size: 13.5px; line-height: 1.5; margin-bottom: 20px; }
+.btn { display: block; text-align: center; background: #E23744; color: white; text-decoration: none; padding: 13px; border-radius: 12px; font-weight: 700; font-size: 15px; }
+.btn:hover { background: #d32f2f; }
+footer { background: #1C1C1C; color: #ffffff; text-align: center; padding: 25px; margin-top: 60px; }
+</style>
+</head>
+<body>
+<nav class="navbar">
+<a href="#" class="logo">🍷 Food<span>Hub</span></a>
+<div class="nav-links">
+<a href="#" class="active">Home</a>
+<a href="#">🛒 Cart</a>
+<a href="#">👤 Profile</a>
+</div>
+</nav>
+<section class="hero">
+<h1>Discover the Best Food & Drinks</h1>
+<p>Order online from your favorite top-rated restaurants with superfast delivery.</p>
+</section>
+<div class="container">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="The Spice House">
+<div class="content">
+<div class="top"><h2>The Spice House</h2><span class="rating">⭐ 4.8</span></div>
+<div class="time">⏱ 25-30 mins</div>
+<div class="cuisine">South Indian</div>
+<div class="addr">📍 MG Road, Bengaluru</div>
+<div class="desc">Authentic South Indian meals made fresh every day.</div>
+<a href="#" class="btn">View Menu</a>
+</div>
+</div>
+</div>
+<footer>© 2026 FoodHub | Fresh Food, Fast Delivery</footer>
+</body>
+</html>

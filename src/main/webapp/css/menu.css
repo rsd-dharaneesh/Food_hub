@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #F8F8F8;
+    color: #1C1C1C;
+    padding-bottom: 90px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    width: 100%;
+    height: 72px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    color: #E23744;
+    letter-spacing: -1px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.logo span {
+    color: #1C1C1C;
+}
+
+.search-box {
+    flex: 1;
+    max-width: 440px;
+    margin: 0 30px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 44px;
+    border: 1.5px solid #E8E8E8;
+    outline: none;
+    background: #FAFAFA;
+    border-radius: 12px;
+    padding: 0 20px 0 42px;
+    font-size: 14px;
+    color: #1C1C1C;
+    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%20%23707070' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 15px center;
+}
+
+.search-box input:focus {
+    background-color: #FFFFFF;
+    border-color: #E23744;
+    box-shadow: 0 0 0 3.5px rgba(226, 55, 68, 0.12);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+    align-items: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #363636;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.navbar ul li a:hover {
+    color: #E23744;
+    background: rgba(226, 55, 68, 0.06);
+}
+
+.cart-count {
+    background: #E23744;
+    color: white;
+    border-radius: 20px;
+    padding: 2px 9px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+/* ================= RESTAURANT HEADER BANNER ================= */
+.restaurant-banner {
+    width: 90%;
+    max-width: 1250px;
+    margin: 30px auto;
+    background: #FFFFFF;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    gap: 36px;
+    border: 1px solid #F0F0F0;
+    position: relative;
+    overflow: hidden;
+}
+
+.restaurant-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(226, 55, 68, 0.03), rgba(226, 55, 68, 0.08));
+    pointer-events: none;
+    border-radius: 0 24px 24px 0;
+}
+
+.restaurant-image img {
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    transition: transform 0.4s ease;
+}
+
+.restaurant-image img:hover {
+    transform: scale(1.03);
+}
+
+.restaurant-details {
+    flex: 1;
+}
+
+.restaurant-details h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1C1C1C;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.banner-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #24963F;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(36, 150, 63, 0.25);
+}
+
+.banner-meta .cuisine-tag {
+    color: #E23744;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.banner-meta .time-tag {
+    background: #FFF0F1;
+    color: #E23744;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13.5px;
+    font-weight: 600;
+}
+
+.restaurant-details p.addr-text {
+    font-size: 14.5px;
+    color: #696969;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+/* ================= CATEGORIES TAB ================= */
+.categories {
+    width: 90%;
+    max-width: 1250px;
+    margin: 24px auto 30px auto;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.categories button {
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: 1.5px solid #E8E8E8;
+    background: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4F4F4F;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.categories button:hover,
+.categories button.active {
+    background: #E23744;
+    color: #FFFFFF;
+    border-color: #E23744;
+    box-shadow: 0 6px 16px rgba(226, 55, 68, 0.25);
+}
+
+/* ================= MENU SECTION ================= */
+.menu-section {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #1C1C1C;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(560px, 1fr));
+    gap: 24px;
+}
+
+.menu-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    border: 1px solid #F0F0F0;
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.menu-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.badge-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bestseller {
+    background: #FFF0F1;
+    color: #E23744;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid #FFCDD2;
+}
+
+.veg-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #24963F;
+    border-radius: 4px;
+    padding: 2px;
+}
+.veg-icon::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #24963F;
+    border-radius: 50%;
+}
+
+.nonveg-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #E23744;
+    border-radius: 4px;
+    padding: 2px;
+}
+.nonveg-icon::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #E23744;
+}
+
+.menu-info h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1C1C1C;
+    margin-top: 2px;
+}
+
+.food-rating {
+    color: #24963F;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.description {
+    color: #707070;
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin: 4px 0 8px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.price {
+    font-size: 20px;
+    color: #1C1C1C;
+    font-weight: 800;
+}
+
+.menu-image {
+    position: relative;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-image img {
+    width: 150px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.add-btn {
+    position: absolute;
+    bottom: -16px;
+    width: 120px;
+    height: 40px;
+    border: 1.5px solid #E23744;
+    border-radius: 10px;
+    background: #FFFFFF;
+    color: #E23744;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(226, 55, 68, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.add-btn:hover {
+    background: #E23744;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(226, 55, 68, 0.35);
+}
+
+/* ================= FLOATING CART ================= */
+.floating-cart {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 320px;
+    background: #1C1C1C;
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    border: 1px solid #333333;
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.floating-cart h3 {
+    color: #E23744;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.floating-cart p {
+    color: #A0A0A0;
+    font-size: 14px;
+}
+
+.floating-cart h2 {
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: 800;
+    margin: 12px 0 16px 0;
+}
+
+.floating-cart button {
+    width: 100%;
+    height: 46px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #E23744, #D32F2F);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 16px rgba(226, 55, 68, 0.4);
+}
+
+.floating-cart button:hover {
+    background: linear-gradient(135deg, #D32F2F, #B71C1C);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    .restaurant-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .banner-meta {
+        justify-content: center;
+    }
+    .floating-cart {
+        left: 20px;
+        right: 20px;
+        width: auto;
+        bottom: 20px;
+    }
+}
